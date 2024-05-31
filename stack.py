@@ -1,4 +1,5 @@
 #Implement a basic stack with the methods pop(), push(), is_empty(), peek().
+#02:14:43
 
 class Stack:
     def __init__(self):

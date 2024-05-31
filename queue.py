@@ -1,7 +1,7 @@
 #Implement a basic queue with the following methods:
 #enqueue(), dequeue(), is_empty(), peek().
 
-#last time: 04:12:29
+#last time: 02:12:35
 
 class Queue:
     def __init__(self):
@@ -11,6 +11,8 @@ class Queue:
         return self.array.append(item)
 
     def dequeue(self):
+        if self.is_empty():
+            return []
         return self.array.pop(0)
 
     def is_empty(self):
@@ -23,6 +25,7 @@ class Queue:
             return []
         return self.array[0]
 
+
 if __name__=='__main__':
     #Usecases:
     q = Queue()
@@ -32,6 +35,6 @@ if __name__=='__main__':
     print(q.peek()) #Should return 1
     q.dequeue()
     q.dequeue()
-    print(q.peek()) #should return 1
+    print(q.peek()) #should return 3
     q.dequeue()
     print(q.peek()) #No error
