@@ -1,30 +1,29 @@
 #Implement a basic queue with the following methods:
 #enqueue(), dequeue(), is_empty(), peek().
 
-#last time: 02:12:35
+#last time: 01:33:73
 
 class Queue:
     def __init__(self):
-        self.array = []
-
-    def enqueue(self, item):
-        return self.array.append(item)
-
-    def dequeue(self):
-        if self.is_empty():
-            return []
-        return self.array.pop(0)
+        self.a = []
 
     def is_empty(self):
-        if len(self.array) !=0:
+        if len(self.a) !=0:
             return False
         return True
 
     def peek(self):
         if self.is_empty():
             return []
-        return self.array[0]
+        return self.a[0]
 
+    def dequeue(self):
+        if self.is_empty():
+            return []
+        return self.a.pop(0)
+
+    def enqueue(self,item):
+        return self.a.append(item)
 
 if __name__=='__main__':
     #Usecases:
